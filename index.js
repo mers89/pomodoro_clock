@@ -8,14 +8,14 @@ $(function(){
  $("#m5time").click(function(){
   if (count > 0){
    count -= 5;
-   $("num").html(count);
+   $("#num").html(count);
   }
   event.preventDefault();
  });
  
   $("#a5time").click(function(){
    count += 5;
-   $("num").html(count);
+   $("#num").html(count);
   event.preventDefault();
  });
  
@@ -23,13 +23,19 @@ $(function(){
   $("#m5Break").click(function(){
   if (count2 > 0){
    count2 -= 5;
-   $("breakNum").html(count2);
+   $("#breakNum").html(count2);
   }
   event.preventDefault();
  });
  
   $("#a5Break").click(function(){
    count2 += 5;
-   $("breakNum").html(count2);
+   $("#breakNum").html(count);
   event.preventDefault();
  });
+ 
+ 
+ 
+ 
+ 
+})
