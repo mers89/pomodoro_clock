@@ -1,0 +1,40 @@
+body{
+ background-image: url("http://res.cloudinary.com/mers/image/upload/v1506641235/rolling-waves-5120x2880-ocean-waves-hd-4k-2971_oq2u89.jpg");
+   background-repeat: no-repeat;
+   /* background-attachment: fixed;*/
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-align: left;
+ background-color: white;
+ background-attachment: fixed; 
+}
+
+.block{
+ background-color: rgba(o,o,o,.9);
+ color: white;
+ padding: 20px;
+ width: 50%;
+ margin-right: auto;
+ margin-left: auto;
+ border-radius: 15px; 
+}
+
+.spacer{
+ padding: 3%;
+}
+
+h2{
+ display: inline;
+}
+
+#start, #reset{
+ margin: 15px;
+}
+.custom {
+ color: black; 
+ background-color: white;
+}
+
