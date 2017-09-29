@@ -20,7 +20,16 @@ $(function(){
  });
  
  
+  $("#m5Break").click(function(){
+  if (count2 > 0){
+   count2 -= 5;
+   $("breakNum").html(count2);
+  }
+  event.preventDefault();
+ });
  
- 
- 
-})
+  $("#a5Break").click(function(){
+   count2 += 5;
+   $("breakNum").html(count2);
+  event.preventDefault();
+ });
