@@ -1,4 +1,3 @@
-
 $(function(){
  
  var buzzer = $("#buzzer")[0],
@@ -36,7 +35,7 @@ $(function(){
  
   $("#a5Break").click(function(){
    count2 += 5;
-   $("#breakNum").html(count);
+   $("#breakNum").html(count2);
   event.preventDefault();
  });
  
