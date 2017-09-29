@@ -5,6 +5,12 @@ $(function(){
      count = parseInt($("#num").html()),
     count2 = parseInt($("#breakNum").html());
  
+/* buzzer.play();*/
+ 
+ $("#session").hide();
+ 
+ 
+ 
  $("#m5time").click(function(){
   if (count > 0){
    count -= 5;
@@ -37,5 +43,10 @@ $(function(){
  
  
  
+/*$("#reset").click(function(){
+ location.reload(); */
+   $("#reset").click(function() {
+    history.go(0);
  
-})
+});
+});
