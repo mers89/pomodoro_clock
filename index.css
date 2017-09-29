@@ -13,7 +13,10 @@ body{
 }
 
 .block{
- background-color: rgba(o,o,o,.9);
+ 
+  background:rgba(152,152,152,0.5);
+
+ /* background-color: rgba(o,o,o,0.4); */
  color: white;
  padding: 20px;
  width: 50%;
