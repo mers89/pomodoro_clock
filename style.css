@@ -1,5 +1,5 @@
 body{
- background-image: url("http://res.cloudinary.com/mers/image/upload/v1506641235/rolling-waves-5120x2880-ocean-waves-hd-4k-2971_oq2u89.jpg");
+ background-image: url("http://res.cloudinary.com/mers/image/upload/v1506728481/wallpaper-2_u9avnk.jpg");
    background-repeat: no-repeat;
    /* background-attachment: fixed;*/
     background-position: center center;
@@ -13,10 +13,8 @@ body{
 }
 
 .block{
- 
-  background:rgba(220,220,220,0.5);
-
- /* background-color: rgba(o,o,o,0.4); */
+  background:rgba(192,192,192,0.5);
+   box-shadow: 10px 10px 5px  #535353;
  color: white;
  padding: 20px;
  width: 50%;
