@@ -8,7 +8,15 @@ $(function(){
  
  $("#session").hide();
  
- 
+ $("#start").click(function() {
+  var counter = setInterval(timer,1000);
+  count *= 60;
+  
+  function timer() {
+   $("#start, #m5time, #m5break, #a5time, #a5break, #title1, #reset #breakNum, #num").hide();
+   
+  }
+ });
  
  $("#m5time").click(function(){
   if (count > 0){
