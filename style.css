@@ -1,94 +1,42 @@
-$(function(){
- 
- var buzzer = $("#buzzer")[0],
-     count = parseInt($("#num").html()),
-    count2 = parseInt($("#breakNum").html());
- 
-/* buzzer.play();*/
- 
- $("#session").hide();
- 
- $("#start").click(function() {
-    var counter = setInterval(timer, 1000);
-    count *= 60;
-    count2 *= 60;
-  
-   function timer() {
-      $("#start, #m5time, #a5time, #m5break, #a5break, #title1, #reset, #breakNum").hide();
-      $("#session").show();
-      $("#session").html("SESSION TIME: ");
+body{
+ background-image: url("http://res.cloudinary.com/mers/image/upload/v1506728481/wallpaper-2_u9avnk.jpg");
+   background-repeat: no-repeat;
+   /* background-attachment: fixed;*/
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-align: left;
+ background-color: white;
+ background-attachment: fixed; 
+}
 
-      count -= 1;
-    
-     if (count === 0) {
-        buzzer.play();
-        clearInterval(counter);
-        $("#num").hide();
-        var counter2 = setInterval(breakTimer, 1000);
-      }
+.block{
+  background:rgba(192,192,192,0.5);
+   box-shadow: -15px 0 15px -15px  #535353;
+ color: white;
+ padding: 20px;
+ width: 50%;
+ margin-right: auto;
+ margin-left: auto;
+ border-radius: 15px; 
+}
 
-      $("#num").html(count);
+.spacer{
+ padding: 3%;
+}
 
-      if (count % 60 >= 10) {
-        $("#num").html(Math.floor(count / 60) + ":" + count % 60);
-      } else {
-        $("#num").html(Math.floor(count / 60) + ":" + "0" + count % 60);
-      }
-    
-    
-       function breakTimer() {
-        $("#session").html("BREAK TIME:");
-        $("#breakNum").show();
+h2{
+ display: inline;
+}
 
-        count2 -= 1;
+#start, #reset{
+ margin: 15px;
+}
+.custom {
+ color: black; 
+ background-color: white;
+}
 
-        if (count2 === 0) {
-          clearInterval(counter2);
-          buzzer.play();
-          $("#reset").show();
-          $("#breakNum, #session").hide();
-        }
 
-        $("#breakNum").html(count2);
-        if (count2 % 60 >= 10) {
-          $("#breakNum").html(Math.floor(count2 / 60) + ":" + count2 % 60);
-        } else {
-          $("#breakNum").html(
-            Math.floor(count2 / 60) + ":" + "0" + count2 % 60
-          );
-        }
-      }
-    }
-  });
-
-  $("#m5time").click(function() {
-    if (count > 0) {
-      count = 5;
-      $("#num").html(count);
-    }
-  });
-
-  $("#a5time").click(function() {
-    count += 5;
-    $("#num").html(count);
-  });
-
-  $("#m5Break").click(function() {
-    if (count2 > 0) {
-      count2 = 5;
-      $("#breakNum").html(count2);
-    }
-  });
-
-  $("#a5Break").click(function() {
-    count2 += 5;
-    $("#breakNum").html(count2);
-  });
- 
-/*$("#reset").click(function(){
- location.reload(); */
-   $("#reset").click(function() {
-    history.go(0);
- 
-});
-});
