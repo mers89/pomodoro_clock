@@ -17,7 +17,7 @@ body{
    box-shadow: -15px 0 15px -15px  #535353;
  color: white;
  padding: 20px;
- width: 50%;
+ width: 30%;
  margin-right: auto;
  margin-left: auto;
  border-radius: 15px; 
@@ -38,5 +38,4 @@ h2{
  color: black; 
  background-color: white;
 }
-
 
