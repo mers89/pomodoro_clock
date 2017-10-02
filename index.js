@@ -1,26 +1,26 @@
-$(function(){
- 
- var buzzer = $("#buzzer")[0],
-     count = parseInt($("#num").html()),
+/*Concept Credit to Mr Snow on Youtube*/
+$(document).ready(function() {
+  var buzzer = $("#buzzer")[0],
+    count = parseInt($("#num").html()),
     count2 = parseInt($("#breakNum").html());
- 
-/* buzzer.play();*/
- 
- $("#session").hide();
- 
- $("#start").click(function() {
+
+  $("#session").hide();
+
+  $("#start").click(function() {
     var counter = setInterval(timer, 1000);
     count *= 60;
     count2 *= 60;
-  
-   function timer() {
-      $("#start, #m5time, #a5time, #m5break, #a5break, #title1, #reset, #breakNum").hide();
+
+    function timer() {
+      $(
+        "#start, #m5time, #a5time, #m5Break, #a5Break, #title1, #reset, #breakNum"
+      ).hide();
       $("#session").show();
       $("#session").html("SESSION TIME: ");
 
       count -= 1;
-    
-     if (count === 0) {
+
+      if (count === 0) {
         buzzer.play();
         clearInterval(counter);
         $("#num").hide();
@@ -34,9 +34,8 @@ $(function(){
       } else {
         $("#num").html(Math.floor(count / 60) + ":" + "0" + count % 60);
       }
-    
-    
-       function breakTimer() {
+
+      function breakTimer() {
         $("#session").html("BREAK TIME:");
         $("#breakNum").show();
 
@@ -73,7 +72,7 @@ $(function(){
     $("#num").html(count);
   });
 
-  $("#m5Break").click(function() {
+  $("#m5time").click(function() {
     if (count2 > 0) {
       count2 = 5;
       $("#breakNum").html(count2);
@@ -84,11 +83,8 @@ $(function(){
     count2 += 5;
     $("#breakNum").html(count2);
   });
- 
-/*$("#reset").click(function(){
- location.reload(); */
-   $("#reset").click(function() {
+
+  $("#reset").click(function() {
     history.go(0);
- 
-});
+  });
 });
