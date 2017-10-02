@@ -73,14 +73,14 @@ $(function(){
     $("#num").html(count);
   });
 
-  $("#m5time").click(function() {
+  $("#m5Break").click(function() {
     if (count2 > 0) {
       count2 = 5;
       $("#breakNum").html(count2);
     }
   });
 
-  $("#a5time").click(function() {
+  $("#a5Break").click(function() {
     count2 += 5;
     $("#breakNum").html(count2);
   });
