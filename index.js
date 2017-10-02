@@ -1,4 +1,4 @@
-/*Concept Credit to Mr Snow on Youtube*/
+
 $(document).ready(function() {
   var buzzer = $("#buzzer")[0],
     count = parseInt($("#num").html()),
@@ -13,7 +13,7 @@ $(document).ready(function() {
 
     function timer() {
       $(
-        "#start, #m5time, #a5time, #m5Break, #a5Break, #title1, #breakNum"
+        "#start, #m5time, #a5time, #m5Break, #a5Break, #title1, #reset, #breakNum"
       ).hide();
       $("#session").show();
       $("#session").html("SESSION TIME: ");
